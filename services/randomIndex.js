@@ -4,7 +4,10 @@ const randomIndex = (playedIndexes, questionsListLength) => {
   let i;
   index = Math.floor(Math.random() * (questionsListLength + 1));
   if (playedIndexes.length !== 0) {
-    
+    if((playedIndexes.length-1)>=questionsListLength){
+
+      return null;
+    }
     for(i=0;i<playedIndexes.length;i++){
       if(index===playedIndexes[i]){
         isEqual=true;
