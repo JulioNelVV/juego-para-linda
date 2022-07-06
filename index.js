@@ -198,6 +198,22 @@ const questionsLists = {
     "Maldita lisiada",
     "Ave",
     "Artista marcial",
+    "Barbie",
+    "Betty la fea",
+    "Rockstar",
+    "Rocky Balboa",
+    "Rambo",
+    "Sonic",
+    "Daddy Yanke",
+    "Shakira",
+    "Michael Jackson",
+    "Pastor evangélico",
+    "Dictador",
+    "Jeque árabe",
+    "Princesa de Disney",
+    "Perro con pulgas",
+    "Foca feliz",
+    
   ],
   Dibuje: [
     "Murciélago",
@@ -241,6 +257,30 @@ const questionsLists = {
     "Actriz rubia",
     "Obra de teatro clásica",
     "Personaje de Garfield",
+    "La Monalisa",
+    "Lisa Simpson",
+    "Unicornio",
+    "Pegaso",
+    "Nutria",
+    "Ardilla voladora",
+    "Delfín rosado",
+    "Arpa",
+    "Arepa paisa",
+    "Huevo frito realista",
+    "Pescado asado",
+    "Algo pesado...",
+    "Algo liviano...",
+    "Hormiga ninja",
+    "Ornitorrinco cojo",
+    "Ardilla en muletas",
+    "Pingüino calvo",
+    "León mueco",
+    "Hiena asesina",
+    "Piraña alegre",
+    "Pez globo desinflado",
+    "Tarántula",
+    "Abeja",
+    "Tulipán"
   ],
 };
 const setCurrentQuestionIndex = (questionsListsCategory) => {
@@ -286,6 +326,7 @@ const selectCategory = (categoriesList, setCurrentCategory) => {
   let fragment = document.createDocumentFragment();
   categoriesList.forEach((categoryItem) => {
     let option = document.createElement("option");
+    option.classList.add("select-category__option")
     option.value = categoryItem;
     option.selected = false;
     if (option.value === currentCategory) {

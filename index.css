@@ -1,3 +1,21 @@
+:root{
+    --primary-color: #FEDCD2;
+    --secondary-color: #FFF;
+    --primary-color-dark:#d5a496;
+    --primary-text: #be5b34;
+    --primary-text-dark:#914628;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda One', cursive;
+    border-radius: .5rem;
+    color: var(--primary-text);
+}
+body{
+    background-color: var(--primary-color);
+}
 #app{
     display: flex;
     flex-flow: row nowrap;
@@ -6,12 +24,44 @@
     row-gap: 1rem;
     font-size: 1.2rem;
 }
+.heading{
+    text-align: center;
+    margin: 1.5rem auto;
+}
+.select-category{
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--primary-text);
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+}
+.select-category:focus{
+    outline: none;
+    border: 1px solid var(--primary-text);
+}
+.select-category__option{
+    background-color: var(--primary-text);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
 .select-category, .play-button{
     font-size: 1.4rem;
     flex-basis: 10%;
 }
 .play-button{
     cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-text);
+    color: var(--secondary-color);
+    outline: 1px solid var(--primary-text);
+    transition: all 0.2s ease-in-out;
+}
+.play-button:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-text);
 }
 .question-container{
     display: flex;
@@ -20,7 +70,9 @@
     align-items: center;
     flex-basis: 50%;
     height: 5rem;
-    border: 2px solid black;
+    border-left: 1rem solid var(--primary-text);
+    background-color: var(--secondary-color);
+    box-shadow: 3px 3px 3px 0px var(--primary-text-dark);
 }
 .question{
     font-size: 1.4rem;
@@ -30,12 +82,18 @@
 @media all and (max-width: 620px){
     #app{
         flex-flow: column nowrap;
+        font-size: 1rem;
     }
     .select-category, .play-button, .question-container{
-        font-size: 1.4rem;
+        font-size: 1rem;
         width: 70%;
+
     }
    .question-container{
+    
     flex-basis: 5rem;
+   }
+   .question{
+    font-size: 1rem;
    }
 }
